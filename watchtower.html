@@ -1,0 +1,68 @@
+<head>
+  <title>Watchtower</title>
+</head>
+
+<body>
+	{{> nav }}
+	<section id="full">
+		<aside>
+			<h3>Watchtower</h3>	
+			{{#each cohorts}}
+				<h6>{{name}}</h6>
+			{{/each}}
+		</aside>	
+		<section id="main">
+			{{> cohort}}
+		</section>
+	</section>
+</body>
+
+<template name="nav">
+  <section class="fixed">
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1>WatchTower</h1>
+        </li>
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            {{> loginButtons}}
+        </ul>
+        <!-- Left Nav Section -->
+        <ul class="left">
+          <li class=""><a href="">Home</a></li>
+          <li class=""><a href="">Private</a></li>
+        </ul>
+      </section>
+    </nav>
+  </section>
+</template>
+
+<template name="studentForm">
+	<form role="form">
+    <section class="form-group">
+      <input id="name" class="form-control" type="text">
+    </section>
+		<section class="form-group">
+			<input id="email" class="form-control" type="email">
+		</section>
+    <section class="form-group">
+      <input class="btn btn-primary" type="submit" value="Create Student" />
+    </section>
+  </form>
+</template>
+
+<template name="cohort">
+	<section id="cohort_body">
+		{{#each students}}
+			<article>
+				<header>{{name}}</header>
+				{{email}}
+			</article>
+		{{/each}}
+	</section>
+</template>

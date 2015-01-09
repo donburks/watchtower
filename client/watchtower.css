@@ -1,0 +1,26 @@
+/* CSS declarations go here */
+aside {
+	float: left;
+	width: 15%;
+	min-width: 150px;
+}
+
+#main {
+	float: left;
+	width: 84%;
+}
+
+#cohort_body article {
+	border-radius: 8px;
+	border: 1px solid #111;
+	padding: 10px;
+	max-width: 500px;
+	margin: 8px;
+}
+
+#cohort_body article header {
+	background-color: navy; 
+	color: white;
+	font-size: 20px;	
+	padding-left: 10px;
+}
